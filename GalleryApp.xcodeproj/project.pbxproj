@@ -10,8 +10,9 @@
 		EFCCAA8BFC6A6761CA23CF62 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00116C5A9F87B92144B7250 /* Pods_GalleryApp.framework */; };
 		FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25527F321B100AD7ACD /* AppDelegate.swift */; };
 		FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */; };
-		FBFEF25A27F321B100AD7ACD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25927F321B100AD7ACD /* ViewController.swift */; };
 		FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBFEF25E27F321B500AD7ACD /* Assets.xcassets */; };
+		FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */; };
+		FBFEF27A27F39AB300AD7ACD /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +22,10 @@
 		FBFEF25227F321B100AD7ACD /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFEF25527F321B100AD7ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBFEF25927F321B100AD7ACD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBFEF25E27F321B500AD7ACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBFEF26327F321B500AD7ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				51F05108341332C7D362473B /* Pods-GalleryApp.debug.xcconfig */,
 				77620E7C826DAD69625C56AB /* Pods-GalleryApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,7 +80,8 @@
 			children = (
 				FBFEF25527F321B100AD7ACD /* AppDelegate.swift */,
 				FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */,
-				FBFEF25927F321B100AD7ACD /* ViewController.swift */,
+				FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */,
+				FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */,
 				FBFEF25E27F321B500AD7ACD /* Assets.xcassets */,
 				FBFEF26327F321B500AD7ACD /* Info.plist */,
 			);
@@ -145,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFEF27A27F39AB300AD7ACD /* SignInViewController.xib in Resources */,
 				FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBFEF25A27F321B100AD7ACD /* ViewController.swift in Sources */,
+				FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */,
 				FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */,
 				FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */,
 			);
