@@ -8,9 +8,12 @@
 import UIKit
 import Kingfisher
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private lazy var photoService = PhotoService.shared
     
     var url : String?
     var date : Double?
@@ -18,10 +21,26 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureImage()
-        configureNavigation()
+        configureDate()
         configureShareButton()
         configureBackButton()
         detailImage.enableScale()
+        configureCollectionView()
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.fetchPhotos()
+        }
+    }
+    
+    func fetchPhotos() {
+        photoService.fetchPhotos { (success: Bool) -> Void in
+            if success {
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                    self.collectionView.isHidden = false
+                }
+            }
+        }
     }
     
     func configureImage() {
@@ -31,15 +50,14 @@ class DetailViewController: UIViewController {
         detailImage.kf.setImage(with: photoURL)
     }
     
-    func configureNavigation() {
+    func configureDate() {
         let date = Date(timeIntervalSince1970: date!)
         let formater = DateFormatter()
-        formater.dateFormat = "dd.mm.yyyy"
+        formater.dateFormat = "dd.MM.yyyy"
         self.title = formater.string(from: date)
     }
     
     func configureBackButton() {
-
         var backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(back))
         backButton.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = backButton
@@ -66,5 +84,36 @@ class DetailViewController: UIViewController {
     func presentActivityViewController(image: UIImage) {
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         self.present(activityViewController, animated: false, completion: nil)
+    }
+    
+    func configureCollectionView() {
+        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: reusableCellId)
+        collectionView.isHidden = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photoURL = URL(string: photoService.photos[indexPath.row].optimalSizeImage.url)
+        detailImage.kf.setImage(with: photoURL)
+        date = photoService.photos[indexPath.row].date
+        configureDate()
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        photoService.photos.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCellId, for: indexPath) as! GalleryCollectionViewCell
+        let url = URL(string: photoService.photos[indexPath.row].optimalSizeImage.url)
+        cell.imageView.kf.setImage(with: url)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 56, height: 56)
     }
 }

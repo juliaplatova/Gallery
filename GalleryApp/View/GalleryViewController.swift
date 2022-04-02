@@ -15,12 +15,10 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 
     private var isPhotosFetched = false
     
-    private lazy var photoService = PhotoService(for: self)
+    private lazy var photoService = PhotoService.shared
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var photos = [Photo]()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -76,8 +74,8 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         
         var detailViewController : DetailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
         
-        detailViewController.url = photos[indexPath.row].optimalSizeImage.url
-        detailViewController.date = photos[indexPath.row].date
+        detailViewController.url = photoService.photos[indexPath.row].optimalSizeImage.url
+        detailViewController.date = photoService.photos[indexPath.row].date
         
         let controller = UINavigationController(rootViewController: detailViewController)
         controller.modalPresentationStyle = .fullScreen
@@ -85,13 +83,13 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photos.count
+        photoService.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCellId, for: indexPath) as! GalleryCollectionViewCell
         if isPhotosFetched {
-            if let url = URL(string: photos[indexPath.row].optimalSizeImage.url) {
+            if let url = URL(string: photoService.photos[indexPath.row].optimalSizeImage.url) {
                 cell.imageView.kf.setImage(with: url)
             }
         }

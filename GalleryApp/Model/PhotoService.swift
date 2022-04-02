@@ -9,12 +9,10 @@ import Foundation
 import SwiftyVK
 
 class PhotoService {
-    
-    private var galleryViewController: GalleryViewController
 
-    init(for VC: GalleryViewController) {
-        galleryViewController = VC
-    }
+    var photos : [Photo] = []
+    
+    static let shared = PhotoService()
 
     public func fetchPhotos(completion: @escaping (Bool) -> Void) {
         
@@ -30,7 +28,8 @@ class PhotoService {
         VK.API.Photos.get(requestParameters).onSuccess { response in
             do {
                 let responseDecoded = try JSONDecoder().decode(PhotoResponse.self, from: response)
-                self.galleryViewController.photos = responseDecoded.items
+//                self.galleryViewController.photos = responseDecoded.items
+                self.photos = responseDecoded.items
                 completion(true)
             } catch let parsingError {
                 completion(false)

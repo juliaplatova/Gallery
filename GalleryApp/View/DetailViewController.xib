@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="GalleryApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="O44-J6-kmw" id="Tiv-ma-Nna"/>
                 <outlet property="detailImage" destination="Db4-FG-Wnk" id="fPg-yy-f0q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,13 +24,30 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Db4-FG-Wnk">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="O44-J6-kmw">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="0cH-nv-p3o"/>
+                        <constraint firstAttribute="height" constant="56" id="eeg-qo-mzb"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="pUS-SW-L3B">
+                        <size key="itemSize" width="56" height="56"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Db4-FG-Wnk" secondAttribute="bottom" id="A7d-tZ-akV"/>
+                <constraint firstItem="O44-J6-kmw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A8x-VY-qzh"/>
                 <constraint firstItem="Db4-FG-Wnk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HOD-y1-kOy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O44-J6-kmw" secondAttribute="trailing" id="I3M-Ua-OSh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Db4-FG-Wnk" secondAttribute="trailing" id="JVl-YX-ayO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O44-J6-kmw" secondAttribute="bottom" id="VhV-Ip-ici"/>
                 <constraint firstItem="Db4-FG-Wnk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iMe-wc-AFW"/>
             </constraints>
             <point key="canvasLocation" x="139" y="52"/>
