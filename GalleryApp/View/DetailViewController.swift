@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
         configureNavigation()
         configureShareButton()
         configureBackButton()
+        detailImage.enableScale()
     }
     
     func configureImage() {
