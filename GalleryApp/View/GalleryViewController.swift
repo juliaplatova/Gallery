@@ -73,7 +73,15 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
+        var detailViewController : DetailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        
+        detailViewController.url = photos[indexPath.row].optimalSizeImage.url
+        detailViewController.date = photos[indexPath.row].date
+        
+        let controller = UINavigationController(rootViewController: detailViewController)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: false, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
