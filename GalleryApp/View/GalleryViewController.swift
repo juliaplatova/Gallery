@@ -13,7 +13,7 @@ let reusableCellId = "cell_id"
 
 class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    private var isPhotosLoaded = false
+    private var isPhotosFetched = false
     
     private lazy var photoService = PhotoService(for: self)
     
@@ -23,22 +23,45 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCollectionView()
+        configureUI()
         DispatchQueue.global(qos: .userInteractive).async {
-            self.loadPhotos()
+            self.fetchPhotos()
         }
     }
     
-    func loadPhotos() {
-        photoService.loadPhotos { (success: Bool) -> Void in
+    func fetchPhotos() {
+        photoService.fetchPhotos { (success: Bool) -> Void in
             if success {
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
+                    self.isPhotosFetched = true
                     self.collectionView.isHidden = false
-                    self.isPhotosLoaded = true
                 }
             }
         }
+    }
+    
+    func configureUI() {
+        configureCollectionView()
+        configureNavigation()
+        
+    }
+    
+    func configureNavigation() {
+        
+        title = "Mobile Up Gallery"
+        
+        var exitButton = UIBarButtonItem()
+        exitButton.title = "Exit"
+        exitButton.tintColor = UIColor.black
+        exitButton.target = self
+        exitButton.action = #selector(logout)
+        
+        navigationItem.rightBarButtonItem = exitButton
+    }
+    
+    @objc func logout() {
+        NSLog("Exit button pressed")
     }
     
     func configureCollectionView() {
@@ -59,7 +82,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCellId, for: indexPath) as! GalleryCollectionViewCell
-        if isPhotosLoaded {
+        if isPhotosFetched {
             if let url = URL(string: photos[indexPath.row].optimalSizeImage.url) {
                 cell.imageView.kf.setImage(with: url)
             }

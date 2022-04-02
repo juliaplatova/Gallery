@@ -16,7 +16,7 @@ class PhotoService {
         galleryViewController = VC
     }
 
-    public func loadPhotos(completion: @escaping (Bool) -> Void) {
+    public func fetchPhotos(completion: @escaping (Bool) -> Void) {
         
         let requestParameters : Dictionary<Parameter, Optional<String>> = [
             .ownerId: VKRequestConstants.groupID,
