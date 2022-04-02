@@ -8,17 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		EFCCAA8BFC6A6761CA23CF62 /* Pods_GalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00116C5A9F87B92144B7250 /* Pods_GalleryApp.framework */; };
+		FBAEEA8E27F7B0EF007838C2 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEEA8C27F7B0EF007838C2 /* GalleryViewController.swift */; };
+		FBAEEA8F27F7B0EF007838C2 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBAEEA8D27F7B0EF007838C2 /* GalleryViewController.xib */; };
+		FBAEEA9427F7BB46007838C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEEA9227F7BB46007838C2 /* DetailViewController.swift */; };
+		FBAEEA9527F7BB46007838C2 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBAEEA9327F7BB46007838C2 /* DetailViewController.xib */; };
+		FBAEEA9727F8985D007838C2 /* VKRequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEEA9627F8985D007838C2 /* VKRequestConstants.swift */; };
+		FBAEEA9B27F8CC66007838C2 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEEA9927F8CC66007838C2 /* GalleryCollectionViewCell.swift */; };
+		FBAEEA9C27F8CC66007838C2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */; };
 		FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25527F321B100AD7ACD /* AppDelegate.swift */; };
 		FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */; };
 		FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBFEF25E27F321B500AD7ACD /* Assets.xcassets */; };
 		FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */; };
 		FBFEF27A27F39AB300AD7ACD /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */; };
+		FBFEF28027F3AB2D00AD7ACD /* AuthManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF27F27F3AB2D00AD7ACD /* AuthManagerDelegate.swift */; };
+		FBFEF28227F3BBA200AD7ACD /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28127F3BBA200AD7ACD /* PhotoService.swift */; };
+		FBFEF28427F3BBE600AD7ACD /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */; };
+		FBFEF28627F3BC0400AD7ACD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28527F3BC0400AD7ACD /* Photo.swift */; };
+		FBFEF28827F3BC1E00AD7ACD /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28727F3BC1E00AD7ACD /* Info.swift */; };
+		FBFEF28E27F4F0FA00AD7ACD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */; };
+		FBFEF29127F5066E00AD7ACD /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF29027F5066E00AD7ACD /* SignInModel.swift */; };
+		FBFEF29327F5082400AD7ACD /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF29227F5082400AD7ACD /* AuthResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51F05108341332C7D362473B /* Pods-GalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.debug.xcconfig"; path = "Target Support Files/Pods-GalleryApp/Pods-GalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		77620E7C826DAD69625C56AB /* Pods-GalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryApp.release.xcconfig"; path = "Target Support Files/Pods-GalleryApp/Pods-GalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		F00116C5A9F87B92144B7250 /* Pods_GalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBAEEA8C27F7B0EF007838C2 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		FBAEEA8D27F7B0EF007838C2 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		FBAEEA9227F7BB46007838C2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FBAEEA9327F7BB46007838C2 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		FBAEEA9627F8985D007838C2 /* VKRequestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKRequestConstants.swift; sourceTree = "<group>"; };
+		FBAEEA9927F8CC66007838C2 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FBFEF25227F321B100AD7ACD /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFEF25527F321B100AD7ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +48,14 @@
 		FBFEF26327F321B500AD7ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		FBFEF27F27F3AB2D00AD7ACD /* AuthManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerDelegate.swift; sourceTree = "<group>"; };
+		FBFEF28127F3BBA200AD7ACD /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		FBFEF28527F3BC0400AD7ACD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FBFEF28727F3BC1E00AD7ACD /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		FBFEF29027F5066E00AD7ACD /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		FBFEF29227F5082400AD7ACD /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +87,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FBAEEA9827F89866007838C2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBAEEA9627F8985D007838C2 /* VKRequestConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FBFEF24927F321B000AD7ACD = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +116,61 @@
 		FBFEF25427F321B100AD7ACD /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBFEF25527F321B100AD7ACD /* AppDelegate.swift */,
-				FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */,
-				FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */,
-				FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */,
+				FBFEF29427F5142200AD7ACD /* Application */,
+				FBFEF28F27F505AB00AD7ACD /* Model */,
+				FBFEF28C27F4F0E100AD7ACD /* ViewModel */,
+				FBFEF28B27F4F06C00AD7ACD /* View */,
 				FBFEF25E27F321B500AD7ACD /* Assets.xcassets */,
 				FBFEF26327F321B500AD7ACD /* Info.plist */,
+				FBAEEA9827F89866007838C2 /* Utils */,
 			);
 			path = GalleryApp;
+			sourceTree = "<group>";
+		};
+		FBFEF28B27F4F06C00AD7ACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */,
+				FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */,
+				FBAEEA8C27F7B0EF007838C2 /* GalleryViewController.swift */,
+				FBAEEA8D27F7B0EF007838C2 /* GalleryViewController.xib */,
+				FBAEEA9227F7BB46007838C2 /* DetailViewController.swift */,
+				FBAEEA9327F7BB46007838C2 /* DetailViewController.xib */,
+				FBAEEA9927F8CC66007838C2 /* GalleryCollectionViewCell.swift */,
+				FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBFEF28C27F4F0E100AD7ACD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBFEF28F27F505AB00AD7ACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBFEF29027F5066E00AD7ACD /* SignInModel.swift */,
+				FBFEF29227F5082400AD7ACD /* AuthResult.swift */,
+				FBFEF28127F3BBA200AD7ACD /* PhotoService.swift */,
+				FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */,
+				FBFEF28727F3BC1E00AD7ACD /* Info.swift */,
+				FBFEF28527F3BC0400AD7ACD /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBFEF29427F5142200AD7ACD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FBFEF27F27F3AB2D00AD7ACD /* AuthManagerDelegate.swift */,
+				FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */,
+				FBFEF25527F321B100AD7ACD /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +184,7 @@
 				FBFEF24E27F321B100AD7ACD /* Sources */,
 				FBFEF24F27F321B100AD7ACD /* Frameworks */,
 				FBFEF25027F321B100AD7ACD /* Resources */,
+				3AD2A44885FFD185DB225160 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,13 +234,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBFEF27A27F39AB300AD7ACD /* SignInViewController.xib in Resources */,
+				FBAEEA8F27F7B0EF007838C2 /* GalleryViewController.xib in Resources */,
 				FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */,
+				FBAEEA9C27F8CC66007838C2 /* GalleryCollectionViewCell.xib in Resources */,
+				FBAEEA9527F7BB46007838C2 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3AD2A44885FFD185DB225160 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryApp/Pods-GalleryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GalleryApp/Pods-GalleryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GalleryApp/Pods-GalleryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B295DFC1DB5B3090BFD2F18F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,9 +290,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFEF28827F3BC1E00AD7ACD /* Info.swift in Sources */,
+				FBAEEA9B27F8CC66007838C2 /* GalleryCollectionViewCell.swift in Sources */,
+				FBFEF28627F3BC0400AD7ACD /* Photo.swift in Sources */,
+				FBFEF28027F3AB2D00AD7ACD /* AuthManagerDelegate.swift in Sources */,
 				FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */,
+				FBFEF29327F5082400AD7ACD /* AuthResult.swift in Sources */,
+				FBFEF29127F5066E00AD7ACD /* SignInModel.swift in Sources */,
+				FBFEF28427F3BBE600AD7ACD /* PhotoResponse.swift in Sources */,
+				FBFEF28227F3BBA200AD7ACD /* PhotoService.swift in Sources */,
+				FBFEF28E27F4F0FA00AD7ACD /* SignInViewModel.swift in Sources */,
+				FBAEEA8E27F7B0EF007838C2 /* GalleryViewController.swift in Sources */,
 				FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */,
 				FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */,
+				FBAEEA9727F8985D007838C2 /* VKRequestConstants.swift in Sources */,
+				FBAEEA9427F7BB46007838C2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z33ZD2X6PY;
@@ -331,6 +450,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yuliapopova.Gallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -343,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z33ZD2X6PY;
@@ -361,6 +482,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yuliapopova.Gallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
