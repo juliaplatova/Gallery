@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  GalleryApp
+
+  Created by Yulia Popova on 3/4/2022.
+  
+*/
+
+"signInUsingVK" = "Вход через VK";
+"exit" = "Выход";
+"locale" = "ru_RU";
+"photo.saved.status.success" = "Фото сохранено!";
+"photoWasntSaved" = "Ошибка! Фото не сохранено!";
+"accept" = "ОК";

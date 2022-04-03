@@ -54,7 +54,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         navigationController!.navigationBar.scrollEdgeAppearance? = navigationController!.navigationBar.standardAppearance
         
         var exitButton = UIBarButtonItem()
-        exitButton.title = "Exit"
+        exitButton.title = AppStrings.exit.rawValue.localized
         exitButton.tintColor = UIColor.black
         exitButton.target = self
         exitButton.action = #selector(logout)

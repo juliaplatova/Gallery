@@ -17,6 +17,9 @@
 		FBAEEA9C27F8CC66007838C2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */; };
 		FBAEEA9F27F8FCEE007838C2 /* ScaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEEA9E27F8FCEE007838C2 /* ScaleExtension.swift */; };
 		FBB76A2827F9FC2E00E80242 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB76A2727F9FC2E00E80242 /* UIImageExtension.swift */; };
+		FBB76A2D27FA0AAC00E80242 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB76A2C27FA0AAC00E80242 /* StringExtension.swift */; };
+		FBB76A3027FA0BDE00E80242 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBB76A3227FA0BDE00E80242 /* Localizable.strings */; };
+		FBB76A3527FA0D7400E80242 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB76A3427FA0D7400E80242 /* Strings.swift */; };
 		FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25527F321B100AD7ACD /* AppDelegate.swift */; };
 		FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */; };
 		FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBFEF25E27F321B500AD7ACD /* Assets.xcassets */; };
@@ -45,6 +48,10 @@
 		FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FBAEEA9E27F8FCEE007838C2 /* ScaleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleExtension.swift; sourceTree = "<group>"; };
 		FBB76A2727F9FC2E00E80242 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		FBB76A2C27FA0AAC00E80242 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FBB76A3127FA0BDE00E80242 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FBB76A3427FA0D7400E80242 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		FBB76A3627FA101400E80242 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBFEF25227F321B100AD7ACD /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFEF25527F321B100AD7ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBFEF25727F321B100AD7ACD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 		FBAEEA9827F89866007838C2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FBB76A3427FA0D7400E80242 /* Strings.swift */,
 				FBAEEA9627F8985D007838C2 /* VKRequestConstants.swift */,
 			);
 			path = Utils;
@@ -104,6 +112,7 @@
 			children = (
 				FBAEEA9E27F8FCEE007838C2 /* ScaleExtension.swift */,
 				FBB76A2727F9FC2E00E80242 /* UIImageExtension.swift */,
+				FBB76A2C27FA0AAC00E80242 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 		FBFEF25427F321B100AD7ACD /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FBB76A3227FA0BDE00E80242 /* Localizable.strings */,
 				FBB76A2B27FA09BC00E80242 /* Controllers */,
 				FBAEEA9D27F8FCC8007838C2 /* Extensions */,
 				FBFEF29427F5142200AD7ACD /* Application */,
@@ -239,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FBFEF24927F321B000AD7ACD;
 			productRefGroup = FBFEF25327F321B100AD7ACD /* Products */;
@@ -256,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBFEF27A27F39AB300AD7ACD /* SignInViewController.xib in Resources */,
+				FBB76A3027FA0BDE00E80242 /* Localizable.strings in Resources */,
 				FBAEEA8F27F7B0EF007838C2 /* GalleryViewController.xib in Resources */,
 				FBFEF25F27F321B500AD7ACD /* Assets.xcassets in Resources */,
 				FBAEEA9C27F8CC66007838C2 /* GalleryCollectionViewCell.xib in Resources */,
@@ -317,6 +329,7 @@
 				FBB76A2827F9FC2E00E80242 /* UIImageExtension.swift in Sources */,
 				FBFEF28627F3BC0400AD7ACD /* Photo.swift in Sources */,
 				FBFEF28027F3AB2D00AD7ACD /* AuthManagerDelegate.swift in Sources */,
+				FBB76A3527FA0D7400E80242 /* Strings.swift in Sources */,
 				FBAEEA9F27F8FCEE007838C2 /* ScaleExtension.swift in Sources */,
 				FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */,
 				FBFEF29327F5082400AD7ACD /* AuthResult.swift in Sources */,
@@ -326,6 +339,7 @@
 				FBFEF28E27F4F0FA00AD7ACD /* SignInViewModel.swift in Sources */,
 				FBAEEA8E27F7B0EF007838C2 /* GalleryViewController.swift in Sources */,
 				FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */,
+				FBB76A2D27FA0AAC00E80242 /* StringExtension.swift in Sources */,
 				FBFEF25827F321B100AD7ACD /* SceneDelegate.swift in Sources */,
 				FBAEEA9727F8985D007838C2 /* VKRequestConstants.swift in Sources */,
 				FBAEEA9427F7BB46007838C2 /* DetailViewController.swift in Sources */,
@@ -333,6 +347,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBB76A3227FA0BDE00E80242 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBB76A3127FA0BDE00E80242 /* en */,
+				FBB76A3627FA101400E80242 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FBFEF26427F321B500AD7ACD /* Debug */ = {

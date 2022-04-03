@@ -60,7 +60,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func configureDate() {
         let date = Date(timeIntervalSince1970: date!)
         let formater = DateFormatter()
-        formater.locale = Locale(identifier: "ru_RU")
+        formater.locale = Locale(identifier: AppStrings.localeOfFormatter.rawValue.localized)
         formater.dateFormat = "d MMMM yyyy"
         self.title = formater.string(from: date)
     }
@@ -95,12 +95,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
             if (type == .saveToCameraRoll) {
                 var titleText : String
                 if (isSuccessful) {
-                    titleText = "Photo was saved!"
+                    titleText = AppStrings.photoWasSaved.rawValue.localized
                 } else {
-                    titleText = "Photo wasn't saved!"
+                    titleText = AppStrings.photoWasntSaved.rawValue.localized
                 }
                 let alert = UIAlertController(title: titleText, message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+                alert.addAction(UIAlertAction(title: AppStrings.acception.rawValue.localized, style: .cancel, handler: { _ in
                     alert.dismiss(animated: true, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
