@@ -21,9 +21,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         configureImage()
-        configureDate()
-        configureShareButton()
-        configureBackButton()
+        configureNavigation()
         detailImage.enableScale()
         configureCollectionView()
         
@@ -41,6 +39,14 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             }
         }
+    }
+    
+    func configureNavigation() {
+        navigationController!.navigationBar.standardAppearance.shadowColor = .white
+        navigationController!.navigationBar.standardAppearance.backgroundColor = .white
+        navigationController!.navigationBar.scrollEdgeAppearance? = navigationController!.navigationBar.standardAppearance
+        configureShareButton()
+        configureBackButton()
     }
     
     func configureImage() {

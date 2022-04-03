@@ -49,6 +49,10 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         
         title = "Mobile Up Gallery"
         
+        navigationController!.navigationBar.standardAppearance.shadowColor = .systemBackground
+        navigationController!.navigationBar.standardAppearance.backgroundColor = .systemBackground
+        navigationController!.navigationBar.scrollEdgeAppearance? = navigationController!.navigationBar.standardAppearance
+        
         var exitButton = UIBarButtonItem()
         exitButton.title = "Exit"
         exitButton.tintColor = UIColor.black
@@ -97,7 +101,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.bounds.width / 2
+        let size = collectionView.bounds.width / 2 - 1
         return CGSize(width: size, height: size)
     }
 }
