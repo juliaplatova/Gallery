@@ -11,7 +11,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
 
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(systemName: "circle")
+        iv.image = UIImage(named: "placeholder.png")
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
