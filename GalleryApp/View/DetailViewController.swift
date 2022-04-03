@@ -29,7 +29,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         DispatchQueue.global(qos: .userInteractive).async {
             self.fetchPhotos()
-        }
+        }        
     }
     
     func fetchPhotos() {
@@ -83,7 +83,23 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func presentActivityViewController(image: UIImage) {
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.present(activityViewController, animated: false, completion: nil)
+        activityViewController.completionWithItemsHandler = { type, isSuccessful, _, _ in
+            if (type == .saveToCameraRoll) {
+                var titleText : String
+                if (isSuccessful) {
+                    titleText = "Photo was saved!"
+                } else {
+                    titleText = "Photo wasn't saved!"
+                }
+                let alert = UIAlertController(title: titleText, message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     func configureCollectionView() {
