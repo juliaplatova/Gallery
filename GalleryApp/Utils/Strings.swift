@@ -8,12 +8,13 @@
 import Foundation
 
 enum AppStrings: String {
+    case signInUsingVK = "sign.in"
     case exit = "exit"
     case localeOfFormatter = "locale"
     case photoWasSaved = "photo.saved.status.success"
-    case photoWasntSaved = "photo.saved.status.failture"
-    case acception = "accept"
-    
+    case photoWasNotSaved = "photo.saved.status.failure"
+    case accept = "accept"
+
     case logoutConfirmation = "logout.confirmation"
     case confirmLogout = "yes"
     case cancelLogout = "no"

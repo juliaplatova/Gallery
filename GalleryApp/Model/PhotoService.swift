@@ -28,10 +28,9 @@ class PhotoService {
         VK.API.Photos.get(requestParameters).onSuccess { response in
             do {
                 let responseDecoded = try JSONDecoder().decode(PhotoResponse.self, from: response)
-//                self.galleryViewController.photos = responseDecoded.items
                 self.photos = responseDecoded.items
                 completion(true)
-            } catch let parsingError {
+            } catch _ {
                 completion(false)
             }
         }.onError { error in

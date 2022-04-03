@@ -12,6 +12,7 @@ extension UIImageView {
     struct StoredScale {
         static var value: Double = 1.0
     }
+
     var currentScale : Double {
         get {
             return StoredScale.value
@@ -20,7 +21,7 @@ extension UIImageView {
             StoredScale.value = newValue
         }
     }
-    
+
     func enableScale() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(startScale(_:)))
         isUserInteractionEnabled = true

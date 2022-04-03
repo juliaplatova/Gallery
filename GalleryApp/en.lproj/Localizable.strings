@@ -7,11 +7,11 @@
 */
 
 "locale" = "en_EN";
-"signInUsingVK" = "Sign In Using VK";
+"sign.in" = "Sign In Using VK";
 "exit" = "Exit";
 "photo.saved.status.success" = "Photo was saved!";
-"photo.saved.status.failture" = "Error! Photo wasn't saved!";
-"accept" = "Accept";
+"photo.saved.status.failure" = "Error! Photo wasn't saved!";
+"acception" = "Accept";
 "logout.confirmation" = "Are you sure you want to exit?";
 "yes" = "Yes";
 "no" = "No";

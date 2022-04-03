@@ -14,15 +14,15 @@ struct Info: Decodable {
     let height: Int
     let width: Int
 
-    enum CodingKeys: String, CodingKey {
+    enum InfoCodingKeys: String, CodingKey {
         case height
         case width
         case url
         case type
     }
-    
+
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: InfoCodingKeys.self)
         height = try container.decode(Int.self, forKey: .height)
         width = try container.decode(Int.self, forKey: .width)
         url = try container.decode(String.self, forKey: .url)

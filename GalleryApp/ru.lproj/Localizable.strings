@@ -7,11 +7,11 @@
 */
 
 "locale" = "ru_RU";
-"signInUsingVK" = "Вход через VK";
+"sign.in" = "Вход через VK";
 "exit" = "Выход";
 "photo.saved.status.success" = "Фото сохранено!";
-"photo.saved.status.failture" = "Ошибка! Фото не сохранено!";
-"accept" = "Accept";
+"photo.saved.status.failure" = "Ошибка! Фото не сохранено!";
+"acception" = "OK";
 "logout.confirmation" = "Вы уверены, что хотите выйти?";
 "yes" = "Да";
 "no" = "Нет";

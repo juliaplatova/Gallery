@@ -12,7 +12,7 @@ import SwiftyVK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var vkDelegateReference: SwiftyVKDelegate?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         vkDelegateReference = AuthManagerDelegate()
         return true

@@ -13,14 +13,14 @@ class SignInViewController: UIViewController {
     struct UIConstants {
         let cornerRadius = 8.0
     }
-    
+
     @IBOutlet weak var signInButton: UIButton!
-    
-    var viewModel: SignInViewModel = SignInViewModel()
-    
+
+    private lazy var authService = AuthService.shared
+
     @IBAction func SignInButtonPressed(_ sender: UIButton) {
 
-        viewModel.signIn { result in
+        authService.signIn { result in
             if case result = AuthResult.success {
                 DispatchQueue.main.async {
                     let controller = UINavigationController(rootViewController: GalleryViewController(nibName: "GalleryViewController", bundle: nil))
@@ -29,8 +29,8 @@ class SignInViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: nil, message: AppStrings.networkError.rawValue.localized, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: AppStrings.confirmLogout.rawValue.localized, style: .default, handler: { _ in
+                    let alert = UIAlertController(title: nil, message: AppStrings.networkError.rawValue.localised, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: AppStrings.confirmLogout.rawValue.localised, style: .default, handler: { _ in
                         alert.dismiss(animated: false, completion: nil)
                     }))
                     self.present(alert, animated: true)
@@ -38,14 +38,15 @@ class SignInViewController: UIViewController {
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-    
+
     private func configureUI() {
         signInButton.layer.cornerRadius = UIConstants().cornerRadius
+        signInButton.titleLabel?.text = AppStrings.signInUsingVK.rawValue.localised
     }
 
 }

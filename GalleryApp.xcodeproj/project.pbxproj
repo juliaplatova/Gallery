@@ -30,8 +30,7 @@
 		FBFEF28427F3BBE600AD7ACD /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */; };
 		FBFEF28627F3BC0400AD7ACD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28527F3BC0400AD7ACD /* Photo.swift */; };
 		FBFEF28827F3BC1E00AD7ACD /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28727F3BC1E00AD7ACD /* Info.swift */; };
-		FBFEF28E27F4F0FA00AD7ACD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */; };
-		FBFEF29127F5066E00AD7ACD /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF29027F5066E00AD7ACD /* SignInModel.swift */; };
+		FBFEF29127F5066E00AD7ACD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF29027F5066E00AD7ACD /* AuthService.swift */; };
 		FBFEF29327F5082400AD7ACD /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFEF29227F5082400AD7ACD /* AuthResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +63,7 @@
 		FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		FBFEF28527F3BC0400AD7ACD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FBFEF28727F3BC1E00AD7ACD /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		FBFEF29027F5066E00AD7ACD /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		FBFEF29027F5066E00AD7ACD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FBFEF29227F5082400AD7ACD /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 				FBAEEA9D27F8FCC8007838C2 /* Extensions */,
 				FBFEF29427F5142200AD7ACD /* Application */,
 				FBFEF28F27F505AB00AD7ACD /* Model */,
-				FBFEF28C27F4F0E100AD7ACD /* ViewModel */,
 				FBFEF28B27F4F06C00AD7ACD /* View */,
 				FBFEF25E27F321B500AD7ACD /* Assets.xcassets */,
 				FBFEF26327F321B500AD7ACD /* Info.plist */,
@@ -174,18 +171,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FBFEF28C27F4F0E100AD7ACD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FBFEF28D27F4F0FA00AD7ACD /* SignInViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		FBFEF28F27F505AB00AD7ACD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBFEF29027F5066E00AD7ACD /* SignInModel.swift */,
+				FBFEF29027F5066E00AD7ACD /* AuthService.swift */,
 				FBFEF29227F5082400AD7ACD /* AuthResult.swift */,
 				FBFEF28127F3BBA200AD7ACD /* PhotoService.swift */,
 				FBFEF28327F3BBE600AD7ACD /* PhotoResponse.swift */,
@@ -217,6 +206,7 @@
 				FBFEF24F27F321B100AD7ACD /* Frameworks */,
 				FBFEF25027F321B100AD7ACD /* Resources */,
 				3AD2A44885FFD185DB225160 /* [CP] Embed Pods Frameworks */,
+				FB850A5B27FA2FFF000D7311 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,6 +307,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FB850A5B27FA2FFF000D7311 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -333,10 +341,9 @@
 				FBAEEA9F27F8FCEE007838C2 /* ScaleExtension.swift in Sources */,
 				FBFEF27927F39AB300AD7ACD /* SignInViewController.swift in Sources */,
 				FBFEF29327F5082400AD7ACD /* AuthResult.swift in Sources */,
-				FBFEF29127F5066E00AD7ACD /* SignInModel.swift in Sources */,
+				FBFEF29127F5066E00AD7ACD /* AuthService.swift in Sources */,
 				FBFEF28427F3BBE600AD7ACD /* PhotoResponse.swift in Sources */,
 				FBFEF28227F3BBA200AD7ACD /* PhotoService.swift in Sources */,
-				FBFEF28E27F4F0FA00AD7ACD /* SignInViewModel.swift in Sources */,
 				FBAEEA8E27F7B0EF007838C2 /* GalleryViewController.swift in Sources */,
 				FBFEF25627F321B100AD7ACD /* AppDelegate.swift in Sources */,
 				FBB76A2D27FA0AAC00E80242 /* StringExtension.swift in Sources */,
