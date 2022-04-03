@@ -29,11 +29,13 @@ extension UIImageView {
 
     @objc private func startScale(_ sender: UIPinchGestureRecognizer) {
         if sender.state == .changed {
-            currentScale = currentScale * sender.scale
-            let scaleResult = sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)
-            guard let scale = scaleResult else { return }
-            sender.view?.transform = scale
-            
+            if (currentScale * sender.scale > 1 && currentScale * sender.scale < 2) {
+                currentScale = currentScale * sender.scale
+                print(sender.scale)
+                let scaleResult = sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)
+                guard let scale = scaleResult else { return }
+                sender.view?.transform = scale
+            }
             sender.scale = 1
         } else if sender.state == .ended {
             let scaleResult = sender.view?.transform.scaledBy(x: (1 / currentScale), y: (1 / currentScale))
