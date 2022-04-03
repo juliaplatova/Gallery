@@ -25,4 +25,8 @@ class SignInModel {
             }
         )
     }
+    
+    public func signOut() {
+        VK.sessions.default.logOut()
+    }
 }

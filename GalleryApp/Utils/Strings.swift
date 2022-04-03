@@ -13,4 +13,10 @@ enum AppStrings: String {
     case photoWasSaved = "photo.saved.status.success"
     case photoWasntSaved = "photo.saved.status.failture"
     case acception = "accept"
+    
+    case logoutConfirmation = "logout.confirmation"
+    case confirmLogout = "yes"
+    case cancelLogout = "no"
+
+    case networkError = "network.error"
 }

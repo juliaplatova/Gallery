@@ -29,7 +29,11 @@ class SignInViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    // MARK: - Alert should be here
+                    let alert = UIAlertController(title: nil, message: AppStrings.networkError.rawValue.localized, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: AppStrings.confirmLogout.rawValue.localized, style: .default, handler: { _ in
+                        alert.dismiss(animated: false, completion: nil)
+                    }))
+                    self.present(alert, animated: true)
                 }
             }
         }

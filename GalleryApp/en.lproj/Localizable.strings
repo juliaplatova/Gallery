@@ -6,9 +6,13 @@
   
 */
 
+"locale" = "en_EN";
 "signInUsingVK" = "Sign In Using VK";
 "exit" = "Exit";
-"locale" = "en_EN";
 "photo.saved.status.success" = "Photo was saved!";
-"photoWasntSaved" = "Error! Photo wasn't saved!";
+"photo.saved.status.failture" = "Error! Photo wasn't saved!";
 "accept" = "Accept";
+"logout.confirmation" = "Are you sure you want to exit?";
+"yes" = "Yes";
+"no" = "No";
+"network.error" = "Network error";

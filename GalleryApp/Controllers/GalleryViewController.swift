@@ -16,6 +16,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     private var isPhotosFetched = false
     
     private lazy var photoService = PhotoService.shared
+    private lazy var signInService : SignInModel = SignInModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
         
@@ -63,7 +64,20 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     @objc func logout() {
-        NSLog("Exit button pressed")
+        let alert = UIAlertController(title: nil, message: AppStrings.logoutConfirmation.rawValue.localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: AppStrings.confirmLogout.rawValue.localized, style: .default, handler: { _ in
+            self.signInService.signOut()
+            var signInViewController : SignInViewController = SignInViewController(nibName: "SignInViewController", bundle: nil)
+            signInViewController.modalPresentationStyle = .fullScreen
+            alert.dismiss(animated: false, completion: nil)
+            self.present(signInViewController, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: AppStrings.cancelLogout.rawValue.localized, style: .cancel, handler: { _ in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func configureCollectionView() {

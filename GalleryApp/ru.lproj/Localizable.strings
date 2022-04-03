@@ -6,9 +6,13 @@
   
 */
 
+"locale" = "ru_RU";
 "signInUsingVK" = "Вход через VK";
 "exit" = "Выход";
-"locale" = "ru_RU";
 "photo.saved.status.success" = "Фото сохранено!";
-"photoWasntSaved" = "Ошибка! Фото не сохранено!";
-"accept" = "ОК";
+"photo.saved.status.failture" = "Ошибка! Фото не сохранено!";
+"accept" = "Accept";
+"logout.confirmation" = "Вы уверены, что хотите выйти?";
+"yes" = "Да";
+"no" = "Нет";
+"network.error" = "Проверьте свое подключение к сети!";
