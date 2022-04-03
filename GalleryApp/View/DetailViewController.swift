@@ -47,6 +47,7 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
         navigationController!.navigationBar.scrollEdgeAppearance? = navigationController!.navigationBar.standardAppearance
         configureShareButton()
         configureBackButton()
+        configureDate()
     }
     
     func configureImage() {
@@ -65,13 +66,13 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func configureBackButton() {
-        var backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(back))
+        var backButton = UIBarButtonItem(image: UIImage.AppIcons.chevronLeftIcon, style: .plain, target: self, action: #selector(back))
         backButton.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = backButton
     }
     
     func configureShareButton() {
-        let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
+        let shareButton = UIBarButtonItem(image: UIImage.AppIcons.shareIcon, style: .plain, target: self, action: #selector(share))
         shareButton.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = shareButton
     }

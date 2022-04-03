@@ -38,6 +38,13 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPF-nq-7Dw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kdT-Ai-J2U"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,8 +54,11 @@
                 <constraint firstItem="Db4-FG-Wnk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HOD-y1-kOy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O44-J6-kmw" secondAttribute="trailing" id="I3M-Ua-OSh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Db4-FG-Wnk" secondAttribute="trailing" id="JVl-YX-ayO"/>
+                <constraint firstItem="sPF-nq-7Dw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NfZ-Vd-utG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O44-J6-kmw" secondAttribute="bottom" id="VhV-Ip-ici"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sPF-nq-7Dw" secondAttribute="trailing" id="due-5B-aI6"/>
                 <constraint firstItem="Db4-FG-Wnk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iMe-wc-AFW"/>
+                <constraint firstItem="sPF-nq-7Dw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rxr-lk-LTq"/>
             </constraints>
             <point key="canvasLocation" x="139" y="52"/>
         </view>
@@ -56,6 +66,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
