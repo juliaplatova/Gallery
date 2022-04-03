@@ -108,6 +108,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FBB76A2B27FA09BC00E80242 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */,
+				FBAEEA8C27F7B0EF007838C2 /* GalleryViewController.swift */,
+				FBAEEA9227F7BB46007838C2 /* DetailViewController.swift */,
+				FBAEEA9927F8CC66007838C2 /* GalleryCollectionViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FBFEF24927F321B000AD7ACD = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +140,7 @@
 		FBFEF25427F321B100AD7ACD /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FBB76A2B27FA09BC00E80242 /* Controllers */,
 				FBAEEA9D27F8FCC8007838C2 /* Extensions */,
 				FBFEF29427F5142200AD7ACD /* Application */,
 				FBFEF28F27F505AB00AD7ACD /* Model */,
@@ -145,12 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				FBFEF27827F39AB300AD7ACD /* SignInViewController.xib */,
-				FBFEF27727F39AB300AD7ACD /* SignInViewController.swift */,
-				FBAEEA8C27F7B0EF007838C2 /* GalleryViewController.swift */,
 				FBAEEA8D27F7B0EF007838C2 /* GalleryViewController.xib */,
-				FBAEEA9227F7BB46007838C2 /* DetailViewController.swift */,
 				FBAEEA9327F7BB46007838C2 /* DetailViewController.xib */,
-				FBAEEA9927F8CC66007838C2 /* GalleryCollectionViewCell.swift */,
 				FBAEEA9A27F8CC66007838C2 /* GalleryCollectionViewCell.xib */,
 			);
 			path = View;
