@@ -1,3 +1,1 @@
-# Gallery
-
-Mobile Up Gallery
+# Mobile Up Gallery
