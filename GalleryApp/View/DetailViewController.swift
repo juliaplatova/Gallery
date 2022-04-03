@@ -53,7 +53,8 @@ class DetailViewController: UIViewController, UICollectionViewDataSource, UIColl
     func configureDate() {
         let date = Date(timeIntervalSince1970: date!)
         let formater = DateFormatter()
-        formater.dateFormat = "dd.MM.yyyy"
+        formater.locale = Locale(identifier: "ru_RU")
+        formater.dateFormat = "d MMMM yyyy"
         self.title = formater.string(from: date)
     }
     
